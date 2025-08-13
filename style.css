@@ -79,7 +79,7 @@ header nav a:hover {
     background: url('assets/ChatGPT Image 12 de ago. de 2025, 20_51_27.png') no-repeat center center/cover;
     height: 70vh; /* Define a altura da seção como 70% da altura da tela */
     color: #ffffff; /* Define a cor do texto como branco */
-    display: flebx; /* Usa flexbox para centralizar o conteúdo */
+    display: flex; /* Corrigido de 'flebx' para 'flex' */
     align-items: center;
     text-align: center;
 }
@@ -278,3 +278,36 @@ footer {
     padding: 20px 0;
     text-align: center;
 }
+
+/*
+    MEDIA QUERIES (ESTILOS PARA TELAS MENORES)
+    As regras aqui são aplicadas em telas com largura de até 768px.
+*/
+@media (max-width: 768px) {
+    /* Ajusta o cabeçalho para telas menores */
+    header .container {
+        flex-direction: column; /* Alinha o logo e o menu um abaixo do outro */
+        gap: 10px;
+    }
+
+    header nav {
+        width: 100%; /* Faz a navegação ocupar a largura total */
+    }
+
+    header nav ul {
+        flex-direction: row; /* Alinha os itens do menu lado a lado */
+        justify-content: space-around; /* Distribui os itens uniformemente */
+        flex-wrap: wrap; /* Garante que os itens quebrem a linha se não couberem */
+        gap: 10px; /* Espaço entre os itens do menu */
+    }
+    
+    /* Outros ajustes para telas menores */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+

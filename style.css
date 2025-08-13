@@ -1,0 +1,280 @@
+/*
+    IMPORTAÇÃO DE FONTES
+    Importa a fonte 'Poppins' do Google Fonts para ser usada na página.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/*
+    ESTILOS GLOBAIS
+    Define estilos básicos para o corpo e todos os elementos.
+*/
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Garante que o padding e a borda não aumentem o tamanho do elemento */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Aplica a fonte 'Poppins' a todo o corpo da página */
+    line-height: 1.6; /* Define a altura da linha para uma melhor leitura */
+    color: #f4f4f4; /* Cor do texto padrão (branco suave) */
+    background-color: #000000; /* Cor de fundo escura */
+}
+
+.container {
+    max-width: 1100px; /* Define a largura máxima para o conteúdo principal */
+    margin: auto; /* Centraliza o container na tela */
+    padding: 0 20px; /* Adiciona um preenchimento nas laterais para telas menores */
+}
+
+/*
+    ESTILOS DO CABEÇALHO (HEADER)
+    Configura a barra de navegação no topo da página.
+*/
+header {
+    background: #000000; /* Cor de fundo do cabeçalho escura */
+    padding: 1rem 0; /* Espaçamento interno superior e inferior */
+    position: sticky; /* Mantém o cabeçalho fixo no topo da tela quando o usuário rola */
+    top: 0;
+    z-index: 1000; /* Garante que o cabeçalho fique por cima de outros elementos */
+    box-shadow: 0 2px 5px rgba(252, 247, 0, 0.5); /* Adiciona uma sombra escura para destacá-lo */
+}
+
+header .container {
+    display: flex; /* Usa flexbox para alinhar o logo e o menu lado a lado */
+    justify-content: space-between; /* Distribui o espaço entre o logo e o menu */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.logo {
+    height: 50px; /* Define a altura do logo */
+}
+
+header nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    display: flex; /* Exibe os links do menu em uma linha */
+}
+
+header nav ul li {
+    margin-left: 20px; /* Adiciona espaço entre os itens do menu */
+}
+
+header nav a {
+    color: #ffe600; /* Cor dos links do menu (branco suave) */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: 600; /* Deixa o texto do link em negrito */
+    transition: color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+}
+
+header nav a:hover {
+    color: #ffe600; /* Muda a cor do link ao passar o mouse para rosa */
+}
+
+/*
+    ESTILOS DA SEÇÃO HERO
+    Estiliza a seção de banner principal.
+*/
+.hero {
+    /* Define uma imagem de fundo, centralizada e que cobre toda a seção. */
+    background: url('assets/ChatGPT Image 12 de ago. de 2025, 20_51_27.png') no-repeat center center/cover;
+    height: 70vh; /* Define a altura da seção como 70% da altura da tela */
+    color: #ffffff; /* Define a cor do texto como branco */
+    display: flebx; /* Usa flexbox para centralizar o conteúdo */
+    align-items: center;
+    text-align: center;
+}
+
+.hero .container {
+    width: 100%; /* Garante que o container ocupe toda a largura */
+    background: rgba(0, 0, 0, 0.5); /* Adiciona um fundo semi-transparente para o texto */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem; /* Tamanho do título principal */
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem; /* Tamanho do subtítulo */
+    margin-bottom: 2rem;
+}
+
+/*
+    ESTILOS DOS BOTÕES GENÉRICOS
+    Estiliza os botões de ação na página.
+*/
+.btn {
+    background: #ffe600; /* Cor de fundo do botão (rosa) */
+    color: #000000; /* Cor do texto do botão */
+    padding: 12px 25px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Transição suave de cor ao passar o mouse */
+}
+
+.btn:hover {
+    background: #ffe600; /* Cor do botão ao passar o mouse */
+}
+
+/*
+    ESTILOS DAS SEÇÕES GERAIS
+    Define estilos comuns para todas as seções.
+*/
+section {
+    padding: 60px 0; /* Espaçamento interno superior e inferior para as seções */
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px; /* Espaçamento abaixo dos títulos de seção */
+    color: #ffe600;
+}
+
+/*
+    ESTILOS DA SEÇÃO DE LOCALIZAÇÃO
+    Adiciona estilos para o endereço e o mapa.
+*/
+#localizacao {
+    background-color: #1e1e1e; /* Fundo escuro para a seção */
+}
+
+#localizacao p, #localizacao address {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+#localizacao address {
+    font-style: normal; /* Remove o itálico padrão da tag address */
+}
+
+.map-container {
+    max-width: 100%; /* Garante que o container do mapa não ultrapasse a largura do container principal */
+    overflow: hidden; /* Evita barras de rolagem indesejadas */
+    border-radius: 10px; /* Adiciona bordas arredondadas ao mapa */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+/*
+    ESTILOS DA SEÇÃO DE SERVIÇOS
+*/
+.servicos-grid {
+    display: grid; /* Usa grid layout para organizar os cards de serviço */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas que se ajustam automaticamente */
+    gap: 30px; /* Espaço entre os cards */
+}
+
+.servico-item {
+    background: #2c2c2c; /* Cor de fundo escura para os cards */
+    color: #f4f4f4; /* Cor do texto dentro dos cards */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.servico-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/*
+    ESTILOS DA SEÇÃO DE GALERIA
+*/
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease; /* Adiciona uma transição para o efeito de zoom */
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.05); /* Zoom na imagem ao passar o mouse */
+}
+
+/*
+    ESTILOS DA SEÇÃO DE CONTATO
+*/
+#contato form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Organiza os campos do formulário em uma coluna */
+}
+
+#contato input, #contato textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #2c2c2c; /* Cor de fundo escura para os campos do formulário */
+    color: #f4f4f4; /* Cor do texto dentro dos campos */
+    border: 1px solid #444; /* Borda sutil */
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contato input::placeholder, #contato textarea::placeholder {
+    color: #aaa; /* Cor do texto de placeholder */
+}
+
+#contato button.btn {
+    background-color: #ffe600;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/*
+    ESTILOS DO BOTÃO FLUTUANTE DO WHATSAPP
+*/
+.whatsapp-btn {
+    position: fixed; /* Fixa o elemento na tela */
+    bottom: 20px; /* A 20px da borda inferior */
+    right: 20px; /* A 20px da borda direita */
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Cor verde do WhatsApp */
+    border-radius: 50%; /* Torna o botão circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: none; /* Inicia escondido e será exibido pelo JavaScript */
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-btn img {
+    width: 40px; /* Define o tamanho do ícone do WhatsApp */
+}
+
+/*
+    ESTILOS DO RODAPÉ (FOOTER)
+*/
+footer {
+    background: #1e1e1e; /* Cor de fundo do rodapé escura */
+    color: #f4f4f4; /* Cor do texto do rodapé */
+    padding: 20px 0;
+    text-align: center;
+}

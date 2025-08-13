@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres para suportar acentuação e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a página para ser responsiva e se adaptar a diferentes tamanhos de tela -->
+    <title>Landing Page Pet Spa</title> <!-- Título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Vincula o arquivo CSS para aplicar o estilo visual -->
+</head>
+<body>
+
+    <!--
+        Cabeçalho da página.
+        Contém o logo e o menu de navegação, com o link "Onde Estamos" como último item.
+    -->
+    <header>
+        <div class="container">
+            <!-- Insira o caminho para o arquivo do seu logo. Recomendo um logo de cor clara para o fundo escuro. -->
+            <img src="assets/ChatGPT Image 12 de ago. de 2025, 20_36_40.png" alt="Logo da Marca" class="logo"> 
+            <nav>
+                <ul>
+                    <li><a href="#servicos">Serviços</a></li> <!-- Link para a seção de serviços -->
+                    <li><a href="#galeria">Galeria</a></li> <!-- Link para a seção de galeria -->
+                    <li><a href="#contato">Contato</a></li> <!-- Link para a seção de contato -->
+                    <li><a href="#localizacao">Onde Estamos</a></li> <!-- Link para a seção de localização -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 
+        Seção principal (Hero) com banner e texto de destaque.
+        Inclui o botão de agendamento.
+    -->
+    <section class="hero">
+        <div class="container">
+            <h1>Cuidado e Carinho para o seu Melhor Amigo</h1> <!-- Título principal da página -->
+            <p>Os melhores serviços de banho, tosa e bem-estar para o seu pet.</p> <!-- Subtítulo ou slogan -->
+            <!-- Botão principal de chamada para ação, redireciona para o WhatsApp. -->
+            <a href="https://api.whatsapp.com/send?phone=556793346380&text=Olá,%20gostaria%20de%20agendar%20um%20horário!" target="_blank" class="btn">Agende um Horário</a>
+        </div>
+    </section>
+
+    <!--
+        Seção de Serviços.
+        Lista os principais serviços oferecidos.
+    -->
+    <section id="servicos">
+        <div class="container">
+            <h2>Nossos Serviços</h2> <!-- Título da seção de serviços -->
+            <div class="servicos-grid">
+                <!-- Card de um serviço. Duplique este bloco para adicionar mais serviços. -->
+                <div class="servico-item">
+                    <!-- Insira o caminho para a imagem do serviço. -->
+                    <img src="assets/Captura de tela 2025-08-12 204937.png" alt="Serviço de Banho e Tosa">
+                    <h3>Banho e Tosa</h3>
+                    <p>Tratamentos completos para manter a higiene e o visual do seu pet sempre impecáveis.</p>
+                </div>
+                <!-- Card de um serviço. -->
+                <div class="servico-item">
+                    <!-- Insira o caminho para a imagem do serviço. -->
+                    <img src="assets/fb3f85b72db4a1ed384ef7dce6a8e957.jpg" alt="Tosa Bebê">
+                    <h3>Tosa Bebê</h3>
+                    <p>Somos especialistas em tosa Bebê.</p>
+                </div>
+                <!-- Card de um serviço. -->
+                <div class="servico-item">
+                    <!-- Insira o caminho para a imagem do serviço. -->
+                    <img src="assets/Captura de tela 2025-08-12 205104.png" alt="Tosa Ursinho">
+                    <h3>Tosa Ursinho</h3>
+                    <p>Entre diversas tosas, tambem somos especializados em tosa Ursinho.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+        Seção de Galeria.
+        Exibe fotos de pets felizes e das instalações.
+    -->
+    <section id="galeria">
+        <div class="container">
+            <h2>Momentos Felizes</h2> <!-- Título da seção de galeria -->
+            <div class="galeria-grid">
+                <!-- Insira o caminho para as fotos da galeria. Duplique para mais fotos. -->
+                <img src="assets/M1.png" alt="Pet Feliz"> 
+                <img src="assets/M2.png" alt="Pet Feliz">
+                <img src="assets/M3.png" alt="Pet Feliz">
+                <img src="assets/M4.png" alt="Pet Feliz">
+                <img src="assets/M5.png" alt="Pet Feliz">
+                <img src="assets/fb3f85b72db4a1ed384ef7dce6a8e957.jpg" alt="Pet Feliz">
+            </div>
+        </div>
+    </section>
+
+     </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Agende um horário ou tire suas dúvidas.</p>
+            <p><strong>(67) 9334-6380</strong></p>
+            <!-- Botão grande de redirecionamento para o WhatsApp -->
+            <a href="https://api.whatsapp.com/send?phone=556793346380&text=Olá,%20gostaria%20de%20agendar%20um%20horário!" target="_blank" class="btn large-btn spaced-btn">Fale Conosco pelo WhatsApp</a>
+        </div>
+    </section>
+
+
+
+    <!--
+        Seção de Localização (agora no final).
+        Exibe o endereço da loja e um mapa interativo.
+    -->
+    <section id="localizacao">
+        <div class="container">
+            <h2>Nossa Localização</h2> <!-- Título da seção de localização -->
+            <p>Venha nos visitar! Estamos prontos para receber o seu pet com carinho.</p>
+            <p>Atendemos de Segunda a Sabado das 8:30 as 19:30.</p>
+            <address> <!-- Tag semântica para indicar um endereço -->
+                Rua Leão Zardo, 1258, 123<br>
+                Jardim São Conrado, Campo Grande - MS<br>
+                CEP: 79093-000
+            </address>
+
+            <div class="map-container">
+                <!--
+                    AQUI VAI O CÓDIGO DO GOOGLE MAPS.
+                    Para pegar o seu, procure seu endereço no Google Maps, clique em 'Compartilhar' > 'Incorporar um mapa'
+                    e copie o código HTML que ele oferece (será um <iframe>).
+                -->
+                <iframe src="https://www.google.com/maps/embed?pb=!4v1755044246127!6m8!1m7!1sOMD2YwHkX7TAeYI-GBwuaA!2m2!1d-20.49695204813055!2d-54.68114129798589!3f267.23129823736826!4f-26.320266072095606!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!--
+        Botão flutuante do WhatsApp.
+        Permanece no canto inferior direito da tela e aparece após o scroll.
+    -->
+    <a href="https://api.whatsapp.com/send?phone=556793346380&text=Olá,%20gostaria%20de%20agendar%20um%20horário!" target="_blank" class="whatsapp-btn">
+        <!-- Insira o caminho para o ícone do WhatsApp. Recomendo uma versão branca ou de cor clara para o fundo escuro. -->
+        <img src="assets/whatsapp-logo-png.png" alt="Fale conosco no WhatsApp">
+    </a>
+
+    <!--
+        Rodapé da página.
+        Contém informações de direitos autorais.
+    -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Pelo Real. Todos os direitos reservados.</p> <!-- Texto de direitos autorais. Você pode editar. -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script> <!-- Vincula o arquivo JavaScript para a interatividade -->
+</body>
+</html>
